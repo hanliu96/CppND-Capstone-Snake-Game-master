@@ -1,13 +1,20 @@
 #include "game.h"
-#include <iostream>
 #include "SDL.h"
+#include "bombs.h"
+#include <iostream>
 
-Game::Game(std::size_t grid_width, std::size_t grid_height)
-    : snake(grid_width, grid_height),
-      engine(dev()),
-      random_w(0, static_cast<int>(grid_width - 1)),
+Game::Game(std::size_t grid_width, std::size_t grid_height, GameMenu &gm)
+    : snake(grid_width, grid_height), _gm(gm), _player(gm.GetPlayerName()),
+      engine(dev()), random_w(0, static_cast<int>(grid_width - 1)),
       random_h(0, static_cast<int>(grid_height - 1)) {
+  _bombs = std::shared_ptr<Bombs>(new Bombs());
   PlaceFood();
+  PlaceBombs();
+}
+
+Game::~Game() {
+  _player.saveScore();
+  _gm.DisplayPlayerScore(_player.name(), GetScore(), GetSize());
 }
 
 void Game::Run(Controller const &controller, Renderer &renderer,
@@ -25,7 +32,7 @@ void Game::Run(Controller const &controller, Renderer &renderer,
     // Input, Update, Render - the main game loop.
     controller.HandleInput(running, snake);
     Update();
-    renderer.Render(snake, food);
+    renderer.Render(snake, food, _bombs);
 
     frame_end = SDL_GetTicks();
 
@@ -36,7 +43,7 @@ void Game::Run(Controller const &controller, Renderer &renderer,
 
     // After every second, update the window title.
     if (frame_end - title_timestamp >= 1000) {
-      renderer.UpdateWindowTitle(score, frame_count);
+      renderer.UpdateWindowTitle(frame_count, _player);
       frame_count = 0;
       title_timestamp = frame_end;
     }
@@ -66,16 +73,24 @@ void Game::PlaceFood() {
 }
 
 void Game::Update() {
-  if (!snake.alive) return;
+  if (!snake.alive)
+    return;
 
   snake.Update();
 
   int new_x = static_cast<int>(snake.head_x);
   int new_y = static_cast<int>(snake.head_y);
 
+  // Check if meet a bomb
+  if (_bombs->BombCell(Coordinate(new_x, new_y)))
+  {
+    snake.alive = false;
+    return;
+  }
+
   // Check if there's food over here
   if (food.x == new_x && food.y == new_y) {
-    score++;
+    _player.incrementScore();
     PlaceFood();
     // Grow snake and increase speed.
     snake.GrowBody();
@@ -83,5 +98,31 @@ void Game::Update() {
   }
 }
 
-int Game::GetScore() const { return score; }
+void Game::PlaceBombs()
+{
+  int x, y;
+  while (true)
+  {
+    /// Return if we meet the size requiremens.
+    if (_numOfBombs == _bombs->count())
+    {
+      return;
+    }
+
+    /// Randomly generate the x and y coordinate.
+    x = random_w(engine);
+    y = random_h(engine);
+
+    // Check that the location is not occupied by a (snake item + food item) before placing
+    // an obstacle.
+    auto foodExistsAtThisCell = food.x == x && food.y == y;
+    if (!snake.SnakeCell(x, y) && !foodExistsAtThisCell)
+    {
+      _bombs->addCoordinate(Coordinate(x, y));
+    }
+  }
+}
+
+
+int Game::GetScore() const { return _player.score(); }
 int Game::GetSize() const { return snake.size; }

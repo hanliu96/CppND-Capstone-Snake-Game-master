@@ -139,13 +139,58 @@ CMakeFiles/SnakeGame.dir/src/snake.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/SnakeGame.dir/src/snake.cpp.s"
 	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/liuhan/Documents/01_Udacity_cpp/CppND-Capstone-Snake-Game-master/src/snake.cpp -o CMakeFiles/SnakeGame.dir/src/snake.cpp.s
 
+CMakeFiles/SnakeGame.dir/src/player.cpp.o: CMakeFiles/SnakeGame.dir/flags.make
+CMakeFiles/SnakeGame.dir/src/player.cpp.o: ../src/player.cpp
+CMakeFiles/SnakeGame.dir/src/player.cpp.o: CMakeFiles/SnakeGame.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/liuhan/Documents/01_Udacity_cpp/CppND-Capstone-Snake-Game-master/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/SnakeGame.dir/src/player.cpp.o"
+	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/SnakeGame.dir/src/player.cpp.o -MF CMakeFiles/SnakeGame.dir/src/player.cpp.o.d -o CMakeFiles/SnakeGame.dir/src/player.cpp.o -c /Users/liuhan/Documents/01_Udacity_cpp/CppND-Capstone-Snake-Game-master/src/player.cpp
+
+CMakeFiles/SnakeGame.dir/src/player.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/SnakeGame.dir/src/player.cpp.i"
+	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/liuhan/Documents/01_Udacity_cpp/CppND-Capstone-Snake-Game-master/src/player.cpp > CMakeFiles/SnakeGame.dir/src/player.cpp.i
+
+CMakeFiles/SnakeGame.dir/src/player.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/SnakeGame.dir/src/player.cpp.s"
+	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/liuhan/Documents/01_Udacity_cpp/CppND-Capstone-Snake-Game-master/src/player.cpp -o CMakeFiles/SnakeGame.dir/src/player.cpp.s
+
+CMakeFiles/SnakeGame.dir/src/gameMenu.cpp.o: CMakeFiles/SnakeGame.dir/flags.make
+CMakeFiles/SnakeGame.dir/src/gameMenu.cpp.o: ../src/gameMenu.cpp
+CMakeFiles/SnakeGame.dir/src/gameMenu.cpp.o: CMakeFiles/SnakeGame.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/liuhan/Documents/01_Udacity_cpp/CppND-Capstone-Snake-Game-master/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object CMakeFiles/SnakeGame.dir/src/gameMenu.cpp.o"
+	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/SnakeGame.dir/src/gameMenu.cpp.o -MF CMakeFiles/SnakeGame.dir/src/gameMenu.cpp.o.d -o CMakeFiles/SnakeGame.dir/src/gameMenu.cpp.o -c /Users/liuhan/Documents/01_Udacity_cpp/CppND-Capstone-Snake-Game-master/src/gameMenu.cpp
+
+CMakeFiles/SnakeGame.dir/src/gameMenu.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/SnakeGame.dir/src/gameMenu.cpp.i"
+	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/liuhan/Documents/01_Udacity_cpp/CppND-Capstone-Snake-Game-master/src/gameMenu.cpp > CMakeFiles/SnakeGame.dir/src/gameMenu.cpp.i
+
+CMakeFiles/SnakeGame.dir/src/gameMenu.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/SnakeGame.dir/src/gameMenu.cpp.s"
+	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/liuhan/Documents/01_Udacity_cpp/CppND-Capstone-Snake-Game-master/src/gameMenu.cpp -o CMakeFiles/SnakeGame.dir/src/gameMenu.cpp.s
+
+CMakeFiles/SnakeGame.dir/src/bombs.cpp.o: CMakeFiles/SnakeGame.dir/flags.make
+CMakeFiles/SnakeGame.dir/src/bombs.cpp.o: ../src/bombs.cpp
+CMakeFiles/SnakeGame.dir/src/bombs.cpp.o: CMakeFiles/SnakeGame.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/liuhan/Documents/01_Udacity_cpp/CppND-Capstone-Snake-Game-master/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object CMakeFiles/SnakeGame.dir/src/bombs.cpp.o"
+	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/SnakeGame.dir/src/bombs.cpp.o -MF CMakeFiles/SnakeGame.dir/src/bombs.cpp.o.d -o CMakeFiles/SnakeGame.dir/src/bombs.cpp.o -c /Users/liuhan/Documents/01_Udacity_cpp/CppND-Capstone-Snake-Game-master/src/bombs.cpp
+
+CMakeFiles/SnakeGame.dir/src/bombs.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/SnakeGame.dir/src/bombs.cpp.i"
+	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/liuhan/Documents/01_Udacity_cpp/CppND-Capstone-Snake-Game-master/src/bombs.cpp > CMakeFiles/SnakeGame.dir/src/bombs.cpp.i
+
+CMakeFiles/SnakeGame.dir/src/bombs.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/SnakeGame.dir/src/bombs.cpp.s"
+	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/liuhan/Documents/01_Udacity_cpp/CppND-Capstone-Snake-Game-master/src/bombs.cpp -o CMakeFiles/SnakeGame.dir/src/bombs.cpp.s
+
 # Object files for target SnakeGame
 SnakeGame_OBJECTS = \
 "CMakeFiles/SnakeGame.dir/src/main.cpp.o" \
 "CMakeFiles/SnakeGame.dir/src/game.cpp.o" \
 "CMakeFiles/SnakeGame.dir/src/controller.cpp.o" \
 "CMakeFiles/SnakeGame.dir/src/renderer.cpp.o" \
-"CMakeFiles/SnakeGame.dir/src/snake.cpp.o"
+"CMakeFiles/SnakeGame.dir/src/snake.cpp.o" \
+"CMakeFiles/SnakeGame.dir/src/player.cpp.o" \
+"CMakeFiles/SnakeGame.dir/src/gameMenu.cpp.o" \
+"CMakeFiles/SnakeGame.dir/src/bombs.cpp.o"
 
 # External object files for target SnakeGame
 SnakeGame_EXTERNAL_OBJECTS =
@@ -155,9 +200,12 @@ SnakeGame: CMakeFiles/SnakeGame.dir/src/game.cpp.o
 SnakeGame: CMakeFiles/SnakeGame.dir/src/controller.cpp.o
 SnakeGame: CMakeFiles/SnakeGame.dir/src/renderer.cpp.o
 SnakeGame: CMakeFiles/SnakeGame.dir/src/snake.cpp.o
+SnakeGame: CMakeFiles/SnakeGame.dir/src/player.cpp.o
+SnakeGame: CMakeFiles/SnakeGame.dir/src/gameMenu.cpp.o
+SnakeGame: CMakeFiles/SnakeGame.dir/src/bombs.cpp.o
 SnakeGame: CMakeFiles/SnakeGame.dir/build.make
 SnakeGame: CMakeFiles/SnakeGame.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/Users/liuhan/Documents/01_Udacity_cpp/CppND-Capstone-Snake-Game-master/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Linking CXX executable SnakeGame"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/Users/liuhan/Documents/01_Udacity_cpp/CppND-Capstone-Snake-Game-master/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Linking CXX executable SnakeGame"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/SnakeGame.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.

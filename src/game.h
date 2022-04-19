@@ -6,10 +6,14 @@
 #include "controller.h"
 #include "renderer.h"
 #include "snake.h"
+#include "player.h"
+#include "gameMenu.h"
+#include "bombs.h"
 
 class Game {
  public:
-  Game(std::size_t grid_width, std::size_t grid_height);
+  Game(std::size_t grid_width, std::size_t grid_height, GameMenu &gm);
+  ~Game();
   void Run(Controller const &controller, Renderer &renderer,
            std::size_t target_frame_duration);
   int GetScore() const;
@@ -24,7 +28,13 @@ class Game {
   std::uniform_int_distribution<int> random_w;
   std::uniform_int_distribution<int> random_h;
 
+  std::shared_ptr<Bombs> _bombs;
+  void PlaceBombs();
+
   int score{0};
+  int _numOfBombs{10};
+  Player _player;
+  GameMenu _gm;
 
   void PlaceFood();
   void Update();

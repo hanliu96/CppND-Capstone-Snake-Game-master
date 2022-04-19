@@ -30,6 +30,18 @@ In this project, you can build your own C++ application or extend this Snake gam
 3. Compile: `cmake .. && make`
 4. Run it: `./SnakeGame`.
 
+## Introduction
+1. Before starting the game, the player will be asked for the player name. When the game is finished the name and the score is saved on the disk (scores.txt).
+2. Add bombs to the board, which will kill the snake when meet with head.
+
+## Meets Rubric
+1. The project demonstrates an understanding of C++ functions and control structures.
+2. The project reads data from a file and process the data, or the program writes data to a file.
+3. The project uses Object Oriented Programming techniques.
+4. Class constructors utilize member initialization lists.
+5. Classes abstract implementation details from their interfaces.
+6. Classes encapsulate behavior.
+7. The project uses smart pointers instead of raw pointers.
 
 ## CC Attribution-ShareAlike 4.0 International
 

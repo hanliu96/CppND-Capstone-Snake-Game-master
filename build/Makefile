@@ -129,6 +129,30 @@ SnakeGame/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/SnakeGame.dir/build.make CMakeFiles/SnakeGame.dir/build
 .PHONY : SnakeGame/fast
 
+src/bombs.o: src/bombs.cpp.o
+.PHONY : src/bombs.o
+
+# target to build an object file
+src/bombs.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/SnakeGame.dir/build.make CMakeFiles/SnakeGame.dir/src/bombs.cpp.o
+.PHONY : src/bombs.cpp.o
+
+src/bombs.i: src/bombs.cpp.i
+.PHONY : src/bombs.i
+
+# target to preprocess a source file
+src/bombs.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/SnakeGame.dir/build.make CMakeFiles/SnakeGame.dir/src/bombs.cpp.i
+.PHONY : src/bombs.cpp.i
+
+src/bombs.s: src/bombs.cpp.s
+.PHONY : src/bombs.s
+
+# target to generate assembly for a file
+src/bombs.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/SnakeGame.dir/build.make CMakeFiles/SnakeGame.dir/src/bombs.cpp.s
+.PHONY : src/bombs.cpp.s
+
 src/controller.o: src/controller.cpp.o
 .PHONY : src/controller.o
 
@@ -177,6 +201,30 @@ src/game.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/SnakeGame.dir/build.make CMakeFiles/SnakeGame.dir/src/game.cpp.s
 .PHONY : src/game.cpp.s
 
+src/gameMenu.o: src/gameMenu.cpp.o
+.PHONY : src/gameMenu.o
+
+# target to build an object file
+src/gameMenu.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/SnakeGame.dir/build.make CMakeFiles/SnakeGame.dir/src/gameMenu.cpp.o
+.PHONY : src/gameMenu.cpp.o
+
+src/gameMenu.i: src/gameMenu.cpp.i
+.PHONY : src/gameMenu.i
+
+# target to preprocess a source file
+src/gameMenu.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/SnakeGame.dir/build.make CMakeFiles/SnakeGame.dir/src/gameMenu.cpp.i
+.PHONY : src/gameMenu.cpp.i
+
+src/gameMenu.s: src/gameMenu.cpp.s
+.PHONY : src/gameMenu.s
+
+# target to generate assembly for a file
+src/gameMenu.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/SnakeGame.dir/build.make CMakeFiles/SnakeGame.dir/src/gameMenu.cpp.s
+.PHONY : src/gameMenu.cpp.s
+
 src/main.o: src/main.cpp.o
 .PHONY : src/main.o
 
@@ -200,6 +248,30 @@ src/main.s: src/main.cpp.s
 src/main.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/SnakeGame.dir/build.make CMakeFiles/SnakeGame.dir/src/main.cpp.s
 .PHONY : src/main.cpp.s
+
+src/player.o: src/player.cpp.o
+.PHONY : src/player.o
+
+# target to build an object file
+src/player.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/SnakeGame.dir/build.make CMakeFiles/SnakeGame.dir/src/player.cpp.o
+.PHONY : src/player.cpp.o
+
+src/player.i: src/player.cpp.i
+.PHONY : src/player.i
+
+# target to preprocess a source file
+src/player.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/SnakeGame.dir/build.make CMakeFiles/SnakeGame.dir/src/player.cpp.i
+.PHONY : src/player.cpp.i
+
+src/player.s: src/player.cpp.s
+.PHONY : src/player.s
+
+# target to generate assembly for a file
+src/player.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/SnakeGame.dir/build.make CMakeFiles/SnakeGame.dir/src/player.cpp.s
+.PHONY : src/player.cpp.s
 
 src/renderer.o: src/renderer.cpp.o
 .PHONY : src/renderer.o
@@ -258,15 +330,24 @@ help:
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
 	@echo "... SnakeGame"
+	@echo "... src/bombs.o"
+	@echo "... src/bombs.i"
+	@echo "... src/bombs.s"
 	@echo "... src/controller.o"
 	@echo "... src/controller.i"
 	@echo "... src/controller.s"
 	@echo "... src/game.o"
 	@echo "... src/game.i"
 	@echo "... src/game.s"
+	@echo "... src/gameMenu.o"
+	@echo "... src/gameMenu.i"
+	@echo "... src/gameMenu.s"
 	@echo "... src/main.o"
 	@echo "... src/main.i"
 	@echo "... src/main.s"
+	@echo "... src/player.o"
+	@echo "... src/player.i"
+	@echo "... src/player.s"
 	@echo "... src/renderer.o"
 	@echo "... src/renderer.i"
 	@echo "... src/renderer.s"

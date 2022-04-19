@@ -1,6 +1,7 @@
 #include "renderer.h"
 #include <iostream>
 #include <string>
+#include "bombs.h"
 
 Renderer::Renderer(const std::size_t screen_width,
                    const std::size_t screen_height,
@@ -31,14 +32,21 @@ Renderer::Renderer(const std::size_t screen_width,
     std::cerr << "Renderer could not be created.\n";
     std::cerr << "SDL_Error: " << SDL_GetError() << "\n";
   }
+
+  // Creating Obstacle Texture
+  bombSurface = SDL_LoadBMP("../img/bomb.bmp");
+  bombTexture = SDL_CreateTextureFromSurface(sdl_renderer, bombSurface);
 }
+
 
 Renderer::~Renderer() {
   SDL_DestroyWindow(sdl_window);
   SDL_Quit();
 }
 
-void Renderer::Render(Snake const snake, SDL_Point const &food) {
+void Renderer::Render(Snake const snake, 
+                      SDL_Point const &food,
+                      const std::shared_ptr<Bombs> bombs) {
   SDL_Rect block;
   block.w = screen_width / grid_width;
   block.h = screen_height / grid_height;
@@ -71,11 +79,31 @@ void Renderer::Render(Snake const snake, SDL_Point const &food) {
   }
   SDL_RenderFillRect(sdl_renderer, &block);
 
+  // Place obstacles
+  placeBombs(bombs);
+
   // Update Screen
   SDL_RenderPresent(sdl_renderer);
 }
 
-void Renderer::UpdateWindowTitle(int score, int fps) {
-  std::string title{"Snake Score: " + std::to_string(score) + " FPS: " + std::to_string(fps)};
+
+void Renderer::placeBombs(const std::shared_ptr<Bombs> bombs) const
+{
+  for (const Coordinate &coordinate : bombs->getCoordinates())
+  {
+    // Rect which will be hosting the Bombs.
+    SDL_Rect bombRect;
+    bombRect.w = screen_width / grid_width;
+    bombRect.h = screen_height / grid_height;
+    bombRect.x = coordinate.getXCoordinate() * bombRect.w;
+    bombRect.y = coordinate.getYCoordinate() * bombRect.h;
+
+    // Render the bombs
+    SDL_RenderCopy(sdl_renderer, bombTexture, NULL, &bombRect);
+  }
+}
+
+void Renderer::UpdateWindowTitle(int fps, Player &player) {
+  std::string title{player.name() + ": " + std::to_string(player.score()) + " FPS: " + std::to_string(fps)};
   SDL_SetWindowTitle(sdl_window, title.c_str());
 }
