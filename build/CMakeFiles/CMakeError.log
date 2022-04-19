@@ -1,0 +1,56 @@
+Compiling the C compiler identification source file "CMakeCCompilerId.c" failed.
+Compiler: /opt/anaconda3/bin/x86_64-apple-darwin13.4.0-clang 
+Build flags: -march=core2;-mtune=haswell;-mssse3;-ftree-vectorize;-fPIC;-fPIE;-fstack-protector-strong;-O2;-pipe
+Id flags:  
+
+The output was:
+254
+clang-4.0: error: unable to execute command: Segmentation fault: 11
+clang-4.0: error: linker command failed due to signal (use -v to see invocation)
+
+
+Compiling the CXX compiler identification source file "CMakeCXXCompilerId.cpp" failed.
+Compiler: /opt/anaconda3/bin/x86_64-apple-darwin13.4.0-clang++ 
+Build flags: -march=core2;-mtune=haswell;-mssse3;-ftree-vectorize;-fPIC;-fPIE;-fstack-protector-strong;-O2;-pipe;-stdlib=libc++;-fvisibility-inlines-hidden;-std=c++14;-fmessage-length=0
+Id flags:  
+
+The output was:
+254
+clang-4.0: error: unable to execute command: Segmentation fault: 11
+clang-4.0: error: linker command failed due to signal (use -v to see invocation)
+
+
+Detecting C compiler ABI info failed to compile with the following output:
+Change Dir: /Users/liuhan/Documents/01_Udacity_cpp/CppND-Capstone-Snake-Game-master/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/opt/anaconda3/bin/make -f Makefile cmTC_0b2f1/fast && /opt/anaconda3/bin/make  -f CMakeFiles/cmTC_0b2f1.dir/build.make CMakeFiles/cmTC_0b2f1.dir/build
+make[1]: Entering directory '/Users/liuhan/Documents/01_Udacity_cpp/CppND-Capstone-Snake-Game-master/build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_0b2f1.dir/CMakeCCompilerABI.c.o
+/opt/anaconda3/bin/x86_64-apple-darwin13.4.0-clang   -march=core2 -mtune=haswell -mssse3 -ftree-vectorize -fPIC -fPIE -fstack-protector-strong -O2 -pipe  -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX12.3.sdk   -v -Wl,-v -MD -MT CMakeFiles/cmTC_0b2f1.dir/CMakeCCompilerABI.c.o -MF CMakeFiles/cmTC_0b2f1.dir/CMakeCCompilerABI.c.o.d -o CMakeFiles/cmTC_0b2f1.dir/CMakeCCompilerABI.c.o -c /usr/local/Cellar/cmake/3.22.3/share/cmake/Modules/CMakeCCompilerABI.c
+clang version 4.0.1 (tags/RELEASE_401/final)
+Target: x86_64-apple-darwin13.4.0
+Thread model: posix
+InstalledDir: /opt/anaconda3/bin
+clang-4.0: warning: -Wl,-v: 'linker' input unused [-Wunused-command-line-argument]
+clang-4.0: error: invalid version number in '-mmacosx-version-min=12.3'
+make[1]: *** [CMakeFiles/cmTC_0b2f1.dir/build.make:79: CMakeFiles/cmTC_0b2f1.dir/CMakeCCompilerABI.c.o] Error 1
+make[1]: Leaving directory '/Users/liuhan/Documents/01_Udacity_cpp/CppND-Capstone-Snake-Game-master/build/CMakeFiles/CMakeTmp'
+make: *** [Makefile:127: cmTC_0b2f1/fast] Error 2
+
+
+
+
+Determining if the C compiler works failed with the following output:
+Change Dir: /Users/liuhan/Documents/01_Udacity_cpp/CppND-Capstone-Snake-Game-master/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/opt/anaconda3/bin/make -f Makefile cmTC_430cf/fast && /opt/anaconda3/bin/make  -f CMakeFiles/cmTC_430cf.dir/build.make CMakeFiles/cmTC_430cf.dir/build
+make[1]: Entering directory '/Users/liuhan/Documents/01_Udacity_cpp/CppND-Capstone-Snake-Game-master/build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_430cf.dir/testCCompiler.c.o
+/opt/anaconda3/bin/x86_64-apple-darwin13.4.0-clang   -march=core2 -mtune=haswell -mssse3 -ftree-vectorize -fPIC -fPIE -fstack-protector-strong -O2 -pipe  -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX12.3.sdk -MD -MT CMakeFiles/cmTC_430cf.dir/testCCompiler.c.o -MF CMakeFiles/cmTC_430cf.dir/testCCompiler.c.o.d -o CMakeFiles/cmTC_430cf.dir/testCCompiler.c.o -c /Users/liuhan/Documents/01_Udacity_cpp/CppND-Capstone-Snake-Game-master/build/CMakeFiles/CMakeTmp/testCCompiler.c
+clang-4.0: error: invalid version number in '-mmacosx-version-min=12.3'
+make[1]: *** [CMakeFiles/cmTC_430cf.dir/build.make:79: CMakeFiles/cmTC_430cf.dir/testCCompiler.c.o] Error 1
+make[1]: Leaving directory '/Users/liuhan/Documents/01_Udacity_cpp/CppND-Capstone-Snake-Game-master/build/CMakeFiles/CMakeTmp'
+make: *** [Makefile:127: cmTC_430cf/fast] Error 2
+
+
+
